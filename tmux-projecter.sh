@@ -21,7 +21,7 @@ tmux send-keys -t $PROJECT 'nv' 'C-m'
 
 if [[ -e "$(pwd)/.angular" ]]; then
     tmux new-window -t $PROJECT -n serve
-    tmux send-keys -t $PROJECT 'ng serve' # not sent, just typed
+    tmux send-keys -t $PROJECT 'npm start' # not sent, just typed
 fi
 tmux new-window -t $PROJECT -n cmd
-tmux select-window -t 1
+tmux -t $PROJECT select-window -t 1
